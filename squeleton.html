@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Artiste — Site Officiel</title>
+  <meta name="description" content="Site officiel — Artiste" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link pour accessibilité -->
+  <a class="skip-link" href="#content">Aller au contenu</a>
+
+  <header class="site-header" role="banner">
+  <div class="brand">
+    <a href="#accueil" class="logo" aria-label="Retour à l'accueil">
+      <img src="assets/images/logo_blanc.svg" alt="Logo de l'artiste" class="logo-img">
+      <span class="logo-text">Artiste</span>
+    </a>
+  </div>
+
+  <!-- Backdrop used only on mobile when the drawer is open -->
+  <div id="navBackdrop" class="nav-backdrop"></div>
+
+  <!-- Bouton hamburger (mobile) -->
+  <button id="menuToggle"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="primaryNav">
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+    <span class="hamburger-bar"></span>
+  </button>
+
+  <!-- Navigation principale -->
+  <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Navigation principale">
+    <ul id="navList" class="nav-list"><!-- injecté par JS --></ul>
+  </nav>
+</header>
+
+  <main id="content" class="content" role="main" tabindex="-1">
+    <!-- Le contenu de page est injecté ici depuis pages.json -->
+    <section class="page page--loading">
+      <div class="skeleton"></div>
+      <div class="skeleton"></div>
+      <div class="skeleton short"></div>
+    </section>
+  </main>
+
+  <!-- ✅ Footer en dehors de #content pour qu’il ne disparaisse jamais -->
+  <footer class="site-footer">
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/toma.natan/?__pwa=1" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="assets/icons/insta.png" alt="Instagram" class="social-icon">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100070532463135" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="assets/icons/facebook.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.tiktok.com/@toma.natan" target="_blank" rel="noopener" aria-label="TikTok">
+        <img src="assets/icons/tiktok.png" alt="TikTok" class="social-icon">
+      </a>
+    </div>
+    <p class="footer-note">© <span id="year"></span> Nathan Thomas — Tous droits réservés</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
