@@ -1,0 +1,1126 @@
+/* --------- Variables de thème --------- */
+:root{
+  --c-primary: #057668;   /* vert canard */
+  --c-muted:   #b9aca6;   /* beige/gris */
+  --c-black:   #000000;
+  --c-white:   #ffffff;
+
+  /* Palette sombre */
+  --bg: #0b0b0b;
+  --bg-alt: #141414;
+  --fg: var(--c-muted);
+  --accent: var(--c-muted);
+  --muted: var(--c-muted);
+
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.3);
+}
+
+/* --- Skip link : visible seulement au focus clavier --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: .5rem .75rem;
+  background: var(--accent);
+  color: var(--c-white);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+#content:focus {
+  outline: none !important;
+}
+
+/* --------- Reset doux --------- */
+*,*::before,*::after{ box-sizing:border-box; }
+html,body{ height:100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height:1.5;
+}
+img,svg,video{ max-width:100%; height:auto; }
+a{ color: inherit; text-decoration: none; }
+a:focus-visible, button:focus-visible{ outline: none; } /* 🔥 Supprime rectangle bleu */
+
+/* Supprime la surbrillance mobile (iOS/Android) */
+a,button,input,textarea{
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --------- Header & nav --------- */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 .75rem;       /* 👈 enlève le padding vertical qui augmente la hauteur */
+  height: 64px;            /* 👈 fixe la hauteur du header */
+  background: var(--bg-alt);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+
+/* Branding */
+.brand .logo{
+  display:flex; align-items:center; gap:.6rem; font-weight:700; letter-spacing:.3px;
+}
+
+/* --- Logo image SVG --- */
+.logo-img {
+  height: 200px;       /* 👈 taille réelle du logo (plus grande) */
+  width: auto;
+  transform: translate(0%, 1.2%);
+  max-height: 100%;   /* 👈 ne dépasse jamais la hauteur du header */
+  object-fit: contain;
+}
+
+.brand .logo {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+/* Le lien parent n’intercepte plus les clics */
+.brand .logo { pointer-events: none; }
+
+/* Seule l’image peut recevoir l’interaction */
+.brand .logo .logo-img { pointer-events: auto; cursor: pointer; }
+
+
+.logo-text {
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.logo-text{ color: var(--accent); }
+
+/* Nav list (desktop) */
+.nav-list{
+  list-style:none; display:flex; gap:.5rem; margin:0; padding:0;
+}
+.nav-list a{
+  display:inline-block;
+  padding:.55rem .9rem;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:.2px;
+  color: var(--c-muted);
+  transition: all .25s ease;
+}
+.nav-list a:hover{
+  color: var(--c-white);
+  background: color-mix(in srgb, var(--c-muted) 25%, transparent);
+}
+.nav-list a[aria-current="page"]{
+  background: var(--c-muted);
+  color: var(--c-white);
+  box-shadow: var(--shadow);
+}
+
+/* Hamburger (mobile) */
+.hamburger{
+  display:none;
+  background:none; border:none; padding:.4rem; border-radius:10px;
+}
+.hamburger:hover{ background: rgba(255,255,255,0.05); }
+.hamburger-bar{
+  display:block; width:26px; height:3px; margin:5px 0;
+  background: var(--accent); border-radius:2px;
+  transition: transform .3s ease, opacity .3s ease;
+}
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(2){ opacity:0; }
+.hamburger[aria-expanded="true"] .hamburger-bar:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+
+/* --------- Contenu --------- */
+.content{
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.page{
+  background: var(--bg-alt);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1rem, 2vw + .5rem, 2rem);
+  color: var(--fg);
+}
+.page h1{
+  margin-top:0;
+  color: var(--c-muted);
+  letter-spacing:.2px;
+  font-size: 2rem; 
+}
+
+/* Skeleton (loading) */
+.skeleton{
+  height: 16px; border-radius: 8px;
+  background: linear-gradient(90deg, #222 25%, #2e2e2e 37%, #222 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+  margin-bottom: .75rem;
+}
+.skeleton.short{ width:40%; height:14px; }
+@keyframes shimmer{ 0%{background-position:100% 0} 100%{background-position:-100% 0} }
+
+/* --------- Footer --------- */
+.site-footer{
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 2rem 1rem;
+  color: var(--muted);
+  background: var(--bg-alt);
+  text-align:center;
+}
+
+/* --------- Responsive --------- */
+/* Desktop */
+@media (min-width: 900px){
+  .primary-nav{ display:block; }
+  .hamburger{ display:none; }
+}
+
+/* Mobile */
+/* ===== Mobile drawer (menu à droite + flou du fond) ===== */
+@media (max-width: 899.98px){
+
+  /* Empêche le scroll du body quand le menu est ouvert */
+  body.nav-open { overflow: hidden; }
+
+  /* Backdrop qui couvre tout l’écran et floute le fond */
+  .nav-backdrop{
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+    z-index: 999; /* sous le tiroir et au-dessus du site */
+  }
+  .nav-backdrop.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Tiroir à droite */
+  .primary-nav{
+    position: fixed;
+    top: 0; right: 0; bottom: 0;
+    width: min(65vw, 250px);
+    background: var(--bg-alt);
+    border-left: 1px solid rgba(255,255,255,0.08);
+    box-shadow: -12px 0 30px rgba(0,0,0,.45);
+    transform: translateX(100%);
+    transition: transform .28s ease;
+    z-index: 1000;       /* au-dessus du backdrop */
+    display: block;      /* plus de display:none */
+    padding: 1rem .75rem;
+    padding-top: 4rem;   /* ⬅️ augmente pour descendre le 1er item */
+    overflow-y: auto;
+  }
+  .primary-nav.open{ transform: translateX(0); }
+
+  /* Liens dans le tiroir */
+  .nav-list{
+    display: grid;
+    gap: .5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .nav-list a{
+    display: block;
+    padding: .9rem 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--c-muted);
+  }
+  .nav-list a:hover{
+    background: color-mix(in srgb, var(--accent) 25%, transparent);
+    color: var(--c-white);
+  }
+}
+
+/* État actif (desktop + mobile) */
+.nav-list a[aria-current="page"]{
+  background: var(--accent);
+  color: var(--c-white);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 700px) {
+  .logo-img {
+    height: 200px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* ===== Mise en page Accueil : image et texte alignés en haut ===== */
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+/* ===== Accueil en plein écran, sans contenant ===== */
+
+/* ACTUALITÉS */
+.page[data-page="accueil"] h1 {
+  color: var(--bg);
+}
+
+/* Quand on est sur l'accueil, le wrapper ne limite plus la largeur */
+.content.home-full {
+  max-width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+/* La section .page n'a plus de carte (fond/bord/ombre) */
+.page[data-page="accueil"] {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* Le hero occupe tout l'écran, bord à bord (full-bleed) */
+.hero-accueil {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;                  /* plein écran */
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);        /* casse toute contrainte de centrage du parent */
+  background-image: url("assets/images/accueil/accueil.jpg");
+  background-size: cover;             /* remplit l'écran (peut rogner un peu) */
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optionnel : léger voile pour lisibilité du texte (garde si utile) */
+.hero-accueil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.30);
+}
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--c-white);
+  text-shadow: 0 3px 12px rgba(0,0,0,.6);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw + 1rem, 6rem); /* 👈 augmente ou diminue ici */
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.2rem, 2vw + .6rem, 2.5rem); /* 👈 idem pour le sous-titre */
+  font-weight: 400;
+  margin-bottom: .4em;
+  color: var(--c-white);
+}
+/* === Logo sur la photo d’accueil === */
+.hero-logo {
+  display: block;
+  width: clamp(160px, 30vw, 400px);
+  transform: translate(-55%, -15%);  /* move left by 20% of its own width */
+  height: auto;
+  margin: 1rem auto 0 auto;         /* espace au-dessus */
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  z-index: 2;
+  position: relative;
+}
+
+@media (max-width: 700px) {
+  .hero-logo {
+    width: clamp(100px, 60vw, 700px);  /* 🔥 beaucoup plus grand sur mobile */
+    transform: translate(-75%, -30%);  /* 👈 repositionne-le verticalement et horizontalement */
+    left: 50%;                         /* centre horizontalement (si position:absolute) */
+    top: 40%;                          /* ajuste la hauteur (si position:absolute) */
+}
+}
+
+/* === Légende photo sur le hero === */
+.hero-credit {
+  position: absolute;
+  bottom: 1.2rem;                 /* distance par rapport au bas de l’image */
+  right: 1.2rem;                  /* alignée à droite de la fenêtre */
+  color: rgba(0,0,0,0.75);
+  font-size: clamp(0.6rem, 3vw, 1rem); /* responsive */
+  font-weight: 300;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);   /* lisible partout */
+  z-index: 5;                     /* au-dessus du hero et du voile */
+  pointer-events: none;           /* ne gêne pas les interactions */
+}
+
+/* Version mobile : un peu plus compacte */
+@media (max-width: 700px) {
+  .hero-credit {
+    font-size: 1rem;
+    bottom: 6px;
+    right: 6px;
+    padding: 3px 7px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* ===== Mise en page Biographie : image et texte alignés en haut ===== */
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* Base mobile : pile (texte puis image) */
+.page[data-page="biographie"] .bio {
+  display: block;
+  gap: 0; /* pas nécessaire en block */
+}
+
+/* Normalise les marges pour éviter le décalage de départ */
+.page[data-page="biographie"] .bio-text,
+.page[data-page="biographie"] .bio-media {
+  margin: 0;
+}
+.page[data-page="biographie"] .bio-text > *:first-child {
+  margin-top: 0;  /* le 1er paragraphe ne pousse pas vers le bas */
+}
+
+/* Styles généraux */
+.page[data-page="biographie"] .bio-text p {
+  margin: .6rem 0 1rem;
+  color: var(--c-white);
+  font-size: 1.1rem;
+  line-height: 1.6;  /* 👈 interligne */
+}
+.page[data-page="biographie"] .bio-media {
+  background: var(--bg);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;           /* ✅ pour positionner la légende par rapport à la photo */
+}
+.page[data-page="biographie"] .bio-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop (≥900px) : 2 colonnes, image à gauche, texte à droite, parfaitement alignés en haut */
+@media (min-width: 900px){
+  .page[data-page="biographie"] .bio {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) 1.4fr; /* image un peu plus étroite */
+    gap: 2rem;
+    align-items: start;         /* aligne les items en haut */
+    justify-items: stretch;
+  }
+  .page[data-page="biographie"] .bio-media {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;          /* encore plus strict */
+    margin: 0;                  /* aucune marge parasite */
+  }
+  .page[data-page="biographie"] .bio-text {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    margin: 0;
+  }
+}
+
+/* === Légende photo biographie, en overlay bas droit === */
+.bio-photo-credit {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  padding: 4px 9px;
+  background: rgba(0,0,0,0.55);
+  color: var(--c-white);
+  font-size: 0.8rem;
+  letter-spacing: 0.4px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;      /* ne gêne jamais les clics */
+  white-space: nowrap;       /* tout sur une ligne */
+}
+
+/* Version mobile : un peu plus compacte */
+@media (max-width: 700px) {
+  .bio-photo-credit {
+    font-size: 0.85rem;
+    bottom: 6px;
+    right: 6px;
+    padding: 3px 7px;
+  }
+}
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+/* ===== Mise en page    Galerie — mosaïque + lightbox  ===== */
+
+/* --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------- */
+
+.page[data-page="galerie"] .gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .8rem;
+}
+
+.page[data-page="galerie"] .gallery-item{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.page[data-page="galerie"] .gallery-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease, filter .3s ease;
+}
+
+/* effet assombri au survol */
+.page[data-page="galerie"] .gallery-item::after{
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0);
+  transition: background .3s ease;
+}
+.page[data-page="galerie"] .gallery-item:hover img{ transform: scale(1.05); }
+.page[data-page="galerie"] .gallery-item:hover::after{ background: rgba(0,0,0,.15); }
+
+/* ===========================
+   LIGHTBOX — image centrée, grande, place réservée pour la légende
+=========================== */
+
+/* Variables réglables */
+:root{
+  --lb-side-gap: 4vw;               /* marge latérale */
+  --lb-caption-space: 18vh;         /* espace réservé pour la légende (mobile) */
+  --lb-caption-space-desktop: 14vh; /* espace réservé pour la légende (desktop) */
+}
+
+/* Overlay de base */
+.lightbox{
+  position: fixed; inset: 0;
+  display: none;                    /* cachée par défaut */
+  z-index: 2000;
+}
+.lightbox.is-open{ display: block; }
+
+/* Voile flou derrière */
+.lightbox::before{
+  content: "";
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+/* IMAGE : centrée parfait au viewport, avec place pour la légende */
+.lb-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  max-width: calc(100vw - 2*var(--lb-side-gap));
+  max-height: calc(100vh - var(--lb-caption-space) - 24px);
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,.6);
+  display: block;
+  z-index: 2;
+}
+
+/* FLÈCHES : alignées sur le centre vertical de l’image */
+.lb-prev, .lb-next{
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  display: grid; place-items: center;
+  border: none; border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  color: #fff; cursor: pointer;
+  z-index: 3;
+}
+.lb-prev{ left: max(8px, 2vw); }
+.lb-next{ right: max(8px, 2vw); }
+
+.lb-close{
+  position: fixed;
+  top: max(10px, 2vh);
+  right: max(10px, 2vw);
+  width: 44px; height: 44px;
+  border: none; border-radius: 50%;
+  background: rgba(0,0,0,.45);
+  color: #fff; cursor: pointer;
+  z-index: 3;
+}
+
+/* LÉGENDE : indépendante, en bas, n’affecte pas le centrage de l’image */
+.lb-caption {
+  position: fixed;   /* gérée dynamiquement par JS */
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  z-index: 3;
+}
+
+/* Desktop : un peu plus de place pour l’image */
+@media (min-width: 900px){
+  .lb-image{
+    max-width: min(86vw, 1600px);
+    max-height: calc(100vh - var(--lb-caption-space-desktop) - 200px);
+  }
+  .lb-caption{
+    font-size: 1rem;
+  }
+}
+
+/* ===== Caption ===== */
+
+/* ===== Caption: style visuel, largeur gérée par JS ===== */
+.lb-caption{
+  box-sizing: border-box;
+  position: fixed;                 /* la position (top/left) est gérée en JS */
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  z-index: 3;
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  transition: none !important;     /* pas d'animation de mouvement */
+}
+
+/* Hiérarchie texte */
+.lb-caption-text{ 
+  font-size: 1rem; 
+  line-height: 1.5; 
+  margin: 0; 
+  font-weight: 400; 
+}
+.lb-caption-credit{
+  display:block; 
+  margin-top:.35rem; 
+  font-size:.85rem; 
+  opacity:.85; 
+  font-style:italic; 
+  letter-spacing:.2px; 
+}
+
+/* -------------- */
+
+/* ===== Footer global ===== */
+
+.site-footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  margin-top: 4rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: .9;
+}
+.footer-socials a:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.footer-note {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.3px;
+  font-weight: 300;
+}
+
+/* ===========================
+   Actualités — Photo FIXE plein écran + panneau qui recouvre
+=========================== */
+
+/* ACTUALITÉS */
+
+/* ACTUALITÉS */
+.page[data-page="actualites"] h1 {
+  color: var(--c-muted); /* beige de ta palette */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  font-size: 3vw;
+}
+
+/* On masque le h1 standard injecté par la SPA pour cette page */
+.page[data-page="actualites"] > h1 { display: none; }
+/* On neutralise la carte .page */
+.page[data-page="actualites"]{ padding:0; background:transparent; box-shadow:none; }
+
+/* Empile proprement les éléments de la page actualités */
+.news-page{ position: relative; }
+
+/* 1) HERO : plein écran ET FIXE au viewport (ne défile pas) */
+.news-hero{
+  position: fixed;             /* clé : l’image ne bouge plus */
+  inset: 0;                    /* couvre toute la fenêtre */
+  width: 100vw;
+  height: 100vh;               /* 100% de la fenêtre */
+  background-image: url("assets/images/actualites/hero.jpg");
+  background-size: cover;      /* remplissage (peut rogner un peu) */
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 0;                  /* derrière le contenu */
+  pointer-events: none;        /* clics passent au contenu */
+}
+
+.news-hero__title{
+  position: fixed;
+  top: 37vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92vw, 1200px);
+  margin: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+@media (max-width: 700px) {
+  .page[data-page="actualites"] h1 {
+    font-size: clamp(1.4rem, 6vw, 2.4rem); /* 👈 un peu plus petit */
+    max-width: 60vw;                       /* 👈 prend presque toute la largeur */
+    line-height: 1.2;                      /* 👈 resserre l'espacement vertical */
+    position: absolute; /* 👈 place le panneau juste après le hero */
+    top: 36.5vh;
+  }
+
+  .news-hero {
+    background-size: contain;     /* 🔥 montre toute l’image sans rogner */
+    background-position: center top; /* tu peux changer selon ton image */
+    background-repeat: no-repeat;
+    background-color: #000;       /* pour combler les bandes éventuelles */
+  }
+
+  .news-wrap {
+    position: absolute; /* 👈 place le panneau juste après le hero */
+    top: -20vh;          /* correspond à la hauteur du hero */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: clamp(20px, 3vw, 30px);
+    box-shadow: 0 -18px 50px rgba(0,0,0,.45);
+  }
+}
+
+.news-hero__veil{
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(0,0,0,0.10) 0%,
+              rgba(0,0,0,0.30) 40%,
+              rgba(0,0,0,0.55) 100%); /* lisibilité */
+}
+.news-hero__title{
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 6px 24px rgba(0,0,0,.6);
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  font-size: clamp(1.6rem, 3.5vw + 0.6rem, 3.4rem);
+  padding: .25rem .6rem;
+}
+
+/* 2) SPACER : laisse voir toute la photo au chargement */
+.news-spacer{
+  height: 100vh;               /* exactement la hauteur du hero */
+}
+
+/* 3) PANNEAU ACTUALITÉS :
+      - commence SUR la photo (chevauche ~50vh)
+      - défile et RECOUVRE totalement l’image d’abord
+*/
+.news-wrap{
+  position: relative;
+  z-index: 1;                  /* au-dessus de la photo fixe */
+  margin-top: -50vh;           /* chevauche la moitié inférieure */
+  background: #000;            /* ton fond sombre */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: clamp(20px, 3.2vw, 40px) clamp(16px, 3.8vw, 48px) clamp(56px, 6vw, 80px);
+  box-shadow: 0 -18px 50px rgba(0,0,0,.45); /* effet “posé” */
+}
+
+/* Articles */
+.news-item{
+  padding: clamp(14px, 2vw, 22px) 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.news-item:last-child{ border-bottom: none; }
+
+.news-title{
+  margin: 0 0 .35rem;
+  font-size: clamp(1.25rem, 1.4vw + 1rem, 2rem);
+  line-height: 1.25;
+  color: #fff;
+  font-weight: 800;
+}
+.news-source{
+  margin: 0 0 .6rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #b9aca6;                /* palette */
+  letter-spacing: .2px;
+}
+.news-link a{
+  display: inline-flex; align-items: center; gap: .4rem;
+  text-decoration: none;
+  font-weight: 600; letter-spacing: .3px;
+  color: #057668;                /* vert palette */
+  border: 1px solid rgba(5,118,104,.35);
+  padding: .5rem .8rem;
+  border-radius: 999px;
+  transition: background .25s ease, color .25s ease, transform .05s ease, border-color .25s ease;
+}
+.news-link a:hover{
+  background: rgba(5,118,104,.15);
+  border-color: rgba(5,118,104,.6);
+}
+.news-link a:active{ transform: translateY(1px); }
+
+/* Forcer le bouton visible en mobile, avec taille et z-index sûrs */
+@media (max-width: 899.98px){
+  .hamburger{
+    display: inline-flex;           /* visible et centrée */
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    z-index: 1101;                  /* au-dessus du header et du backdrop */
+    position: relative;
+    cursor: pointer;
+  }
+  .hamburger-bar{
+    background: var(--c-white);     /* plus contrasté que var(--accent) si besoin */
+  }
+}
+
+/* (option debug) — à enlever après test :
+   force l’affichage du bouton toutes tailles pour vérifier qu’il existe */
+.hamburger.__debug-show{
+  display: inline-flex !important;
+}
+
+/* ==== Actualités : coller le dernier article au footer (mobile) ==== */
+@media (max-width: 700px){
+
+  /* 1) pas d'espace par défaut sur le paragraphe du lien */
+  .page[data-page="actualites"] .news-link{
+    margin: 0 !important;
+  }
+
+  /* 2) retire tout coussin en bas du panneau */
+  .page[data-page="actualites"] .news-wrap{
+    padding-bottom: 0 !important;
+  }
+
+  /* 3) compacte VRAIMENT le dernier article */
+  .page[data-page="actualites"] .news-item:last-child{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  /* 4) supprime la marge inférieure du wrapper .content juste pour Actualités */
+  .content:has(.page[data-page="actualites"]){
+    margin-bottom: 0 !important;
+  }
+
+  /* 5) rapproche le footer (sans changer les autres pages) */
+  body:has(.page[data-page="actualites"]) .site-footer{
+    margin-top: 6px !important;
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+  }
+  body:has(.page[data-page="actualites"]) .footer-socials{
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 700px){
+  body.is-actualites .content{ margin-bottom: 0 !important; }
+  body.is-actualites .site-footer{
+    margin-top: 6px !important;
+    padding-top: 10px !important;
+    padding-bottom: 12px !important;
+  }
+  body.is-actualites .footer-socials{ margin-bottom: 8px !important; }
+}
+
+@media (max-width: 700px){
+  .news-wrap {
+    box-shadow: 0 -8px 24px rgba(0,0,0,.28);
+  }
+}
+
+/* === Sticky footer layout (works for short pages) === */
+html, body {
+  height: 100%;
+}
+
+body {
+  min-height: 100dvh;           /* fill the viewport on any device */
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  flex: 0 0 auto;               /* header keeps its natural height */
+}
+
+.content {
+  flex: 1 0 auto;               /* <-- This is the filler */
+  min-height: 0;                /* avoid flex overflow issues on mobile */
+  display: block;               /* keep your existing layout */
+}
+
+/* Footer stays at the bottom when content is short */
+.site-footer {
+  flex: 0 0 auto;
+  margin-top: 0;                /* ensure no accidental extra gap */
+}
+
+/* ############################################################## */
+
+/* CONTACT */
+
+/* CONTACT container */
+.page[data-page="contact"] .contact-card {
+  width: min(960px, 92vw);
+  margin: clamp(24px, 4vw, 56px) auto;
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--bg-alt);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  color: var(--fg);
+}
+
+/* Indent the body content a bit to the right */
+.page[data-page="contact"] .contact-body {
+  margin-left: clamp(12px, 3vw, 40px);
+}
+
+.page[data-page="contact"] .contact-block {
+  margin: clamp(16px, 2vw, 24px) 0;
+}
+.page[data-page="contact"] .contact-block h2 {
+  margin: 0 0 .35rem;
+  color: var(--c-white);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 5vw, 1.8rem);
+}
+.page[data-page="contact"] .contact-card a {
+  color: var(--c-white);
+  display: inline-block;
+  transition: opacity .2s ease;
+}
+.page[data-page="contact"] .contact-card a:hover { opacity: .9; }
+
+@media (max-width: 560px) {
+  .page[data-page="contact"] .contact-card { width: 80vw; }
+  .page[data-page="contact"] .contact-body { margin-left: clamp(10px, 2vw, 24px); }
+}
+
+/* ===== Spécifique iPhone SE (≈375px) ===== */
+@media (max-width: 375px) {
+
+  /* on reprend la logique mobile mais on abaisse un peu le titre */
+  .page[data-page="actualites"] h1 {
+    font-size: clamp(1.3rem, 6vw, 9rem);
+    max-width: 60vw;
+    line-height: 1.2;
+    position: absolute;
+    top: 43.5vh; /* 🔥 avant c’était ~36.5vh : on le place clairement sous l’image */
+    margin: 0;
+    text-align: center;
+    color: var(--c-muted);
+  }
+
+  /* on garde l’image telle quelle */
+  .news-hero {
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-color: #000;
+  }
+
+   /* on garde la boîte mais on l’ajuste légèrement plus bas */
+  .news-wrap {
+    top: -17.4vh; /* 🔥 avant -20vh → on la baisse un peu pour laisser plus de place au titre */
+  }
+}
+
+/* === Correction du footer masqué sur la page Actualités === */
+body:has(.page[data-page="actualites"]) .site-footer {
+  position: relative;     /* pour que le footer se place dans le flux */
+  z-index: 2;             /* passe au-dessus du hero fixe */
+  background: #000;       /* pour garantir la continuité du fond */
+}
+
+/* ############################################################## */
+/* BILLETERIE + COMPTE À REBOURS */
+/* ############################################################## */
+
+/* Étendre la largeur du contenant sur la page Billetterie */
+.content:has(.page[data-page="billetterie"]) {
+  width: 95vw;      /* 🔥 tu choisis : 1200, 1300, 1400… */
+}
+
+/* Conteneur général de la page billetterie */
+.page[data-page="billetterie"] .ticketing {
+  max-width: 780px;
+  margin: 8px auto 0;      /* 🔥 beaucoup moins d’espace au-dessus, pas de margin-bottom */
+  text-align: center;
+}
+
+/* Le titre de page est déjà .page h1 => couleur champagne OK.
+   On peut juste recentrer si tu veux : */
+.page[data-page="billetterie"] h1 {
+  text-align: left;
+}
+
+/* ===== Encadré champagne pour l’annonce ===== */
+.page[data-page="billetterie"] .ticketing-info {
+  color: #000;                               /* texte noir pour le contraste */
+  background: color-mix(in srgb, var(--c-muted) 80%, #ffffff 10%);
+  padding: 0.9rem 1.4rem;
+  border-radius: 14px;
+  display: inline-block;                     /* l’encadré suit la largeur du texte */
+  margin-bottom: clamp(18px, 3vw, 28px);
+  font-size: clamp(1.05rem, 2.6vw, 1.4rem);
+  box-shadow: 0 4px 22px rgba(0,0,0,0.25);   /* subtil pour le faire ressortir */
+  letter-spacing: 0.3px;
+}
+
+/* Bloc compte à rebours */
+.page[data-page="billetterie"] .countdown {
+  margin-top: clamp(12px, 2vw, 20px);
+}
+
+/* Petit label “Ouverture dans” */
+.page[data-page="billetterie"] .countdown-label {
+  color: var(--c-muted); /* champagne */
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Grille des unités */
+.page[data-page="billetterie"] .countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 2.8vw, 22px);
+  flex-wrap: wrap;
+}
+
+/* Une case (jours / heures / minutes / secondes) */
+.page[data-page="billetterie"] .countdown-unit {
+  min-width: 70px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.55);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* Nombre (gros, blanc) */
+.page[data-page="billetterie"] .count-number {
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(1.4rem, 4.3vw, 2.2rem);
+  line-height: 1.1;
+}
+
+/* Libellé (jours / heures / etc.) */
+.page[data-page="billetterie"] .count-label {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--c-muted);
+}
+
+/* Message quand la date est passée */
+.page[data-page="billetterie"] .countdown-end {
+  margin-top: 18px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}

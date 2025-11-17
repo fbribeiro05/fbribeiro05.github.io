@@ -1,0 +1,33 @@
+{
+  "siteTitle": " ",
+  "pages": [
+    {
+      "id": "accueil",
+      "title": "Accueil",
+      "contentUrl": "partials/accueil_logo.html"
+    },
+    { "id": "actualites", 
+      "title": "Actualités", 
+      "contentUrl": "partials/actualites.html" 
+    },
+    {
+      "id": "biographie",
+      "title": "Biographie",
+      "contentUrl": "partials/biographie.html"
+    },
+    {
+      "id": "billetterie",
+      "title": "Billetterie",
+      "contentUrl": "partials/billetterie.html"
+    },
+    { "id": "galerie", 
+    "title": "Nathan Thomas en images", 
+    "contentUrl": "partials/galerie.html" 
+    },
+    {
+    "id": "contact",
+    "title": "Contact",
+    "contentUrl": "partials/contact.html"
+  }
+  ]
+}
