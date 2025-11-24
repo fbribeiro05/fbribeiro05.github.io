@@ -293,8 +293,13 @@ const safeReposition = () => {
 };
 
 // Helpers
-const setDocumentTitle = (pageTitle) => {
-  document.title = `${pageTitle} — ${SITE_TITLE}`;
+const setDocumentTitle = (routeId) => {
+  // On regarde le label du menu pour cette route
+  const navItem = NAV_ITEMS.find(item => item.id === routeId);
+  const navLabel = navItem ? navItem.label : "Page";
+
+  // 🔥 Titre de l’onglet forcé ici
+  document.title = `Compagnie NTH — ${navLabel}`;
 };
 
 // --- Drawer à droite + flou du fond ---
@@ -372,7 +377,7 @@ if (routeId === "accueil") {
 }
 
   if (!page){
-    setDocumentTitle("Page introuvable");
+    setDocumentTitle(routeId);
     content.innerHTML = `
       <section class="page">
         <h1>Page introuvable</h1>
@@ -382,10 +387,11 @@ if (routeId === "accueil") {
     // Donne le focus sans faire scroller vers le bas
     if (content && typeof content.focus === "function") {
       content.focus({ preventScroll: true });
-}
+    }
+    return;
   }
 
-  setDocumentTitle(page.title || "Page");
+  setDocumentTitle(routeId);
 
   // Indicateur léger de chargement (optionnel)
   content.innerHTML = `
@@ -438,8 +444,6 @@ async function loadPages(){
     const res = await fetch("pages.json", { cache: "no-store" });
     if (!res.ok) throw new Error("Impossible de charger pages.json");
     const data = await res.json();
-
-    SITE_TITLE = data.siteTitle || SITE_TITLE;
 
     // Adaptation des pages -> dictionnaire
     PAGES = {};
