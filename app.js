@@ -27,7 +27,7 @@ if (!navBackdrop) {
 
 // État
 let PAGES = {};
-let SITE_TITLE = "Artiste";
+let SITE_TITLE = "Compagnie NTH";
 
 // Petit bus de hooks (JS spécifique par page) — facultatif
 const PAGE_SCRIPTS = {
