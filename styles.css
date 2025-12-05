@@ -704,6 +704,7 @@ a,button,input,textarea{
   color: rgba(255,255,255,0.7);
   letter-spacing: 0.3px;
   font-weight: 300;
+  margin-bottom: 0.3rem;
 }
 
 /* ===========================
@@ -1158,4 +1159,16 @@ body {
 .site-footer {
   background: #050505;
   color: rgba(255,255,255,0.9);
+}
+
+.site-footer {
+  padding-top: 1.2rem;      /* 🔥 réduit la hauteur du footer */
+  padding-bottom: 0.1rem;   /* réduit encore */
+}
+
+.site-credit {
+  margin-top: 0rem;
+  font-size: 0.75rem;
+  opacity: 0.6;
+  color: #fff;
 }
