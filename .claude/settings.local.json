@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 -c ' *)",
+      "Bash(osascript -l JavaScript -e ' *)",
+      "Bash(sips -g pixelWidth -g pixelHeight Barnum12.jpg Starmania2.jpg Gatsby1.JPG Hadestown1.jpg RomeoJuliette5.png FANVision5.JPG RoiSoleil1.JPG)",
+      "Bash(python3 -c \"import http.server\")"
+    ]
+  }
+}
