@@ -67,6 +67,7 @@ window.TRANSLATIONS = {
     "gallery.caption.fanvision": "FANVision Song Contest, Malta — represented Switzerland, 2nd place (2025)",
     "gallery.caption.gatsby": "The Great Gatsby — Nick Carraway, 2026",
     "gallery.caption.roisoleil": "La Vie de Molière, 2016",
+    "gallery.caption.shooting": "Photo shooting, 2026",
 
     "journey.eyebrow": "Where Your Money Goes",
     "journey.h2": "The budget",
@@ -164,6 +165,7 @@ window.TRANSLATIONS = {
     "gallery.caption.fanvision": "FANVision Song Contest, Malte — a représenté la Suisse, 2e place (2025)",
     "gallery.caption.gatsby": "The Great Gatsby — Nick Carraway, 2026",
     "gallery.caption.roisoleil": "La Vie de Molière, 2016",
+    "gallery.caption.shooting": "Shooting photo, 2026",
 
     "journey.eyebrow": "Où va l'argent",
     "journey.h2": "Le budget",
@@ -261,6 +263,7 @@ window.TRANSLATIONS = {
     "gallery.caption.fanvision": "FANVision Song Contest, Malta — vertrat die Schweiz, 2. Platz (2025)",
     "gallery.caption.gatsby": "The Great Gatsby — Nick Carraway, 2026",
     "gallery.caption.roisoleil": "La Vie de Molière, 2016",
+    "gallery.caption.shooting": "Fotoshooting, 2026",
 
     "journey.eyebrow": "Wofür das Geld verwendet wird",
     "journey.h2": "Das Budget",
@@ -358,6 +361,7 @@ window.TRANSLATIONS = {
     "gallery.caption.fanvision": "FANVision Song Contest, Malta — representou a Suíça, 2.º lugar (2025)",
     "gallery.caption.gatsby": "The Great Gatsby — Nick Carraway, 2026",
     "gallery.caption.roisoleil": "La Vie de Molière, 2016",
+    "gallery.caption.shooting": "Ensaio fotográfico, 2026",
 
     "journey.eyebrow": "Para Onde Vai o Dinheiro",
     "journey.h2": "O Orçamento",
