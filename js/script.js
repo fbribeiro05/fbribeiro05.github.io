@@ -156,11 +156,11 @@
   // ---------- Credits expand/collapse ----------
   function initCredits() {
     var toggle = document.getElementById("credits-toggle");
-    var list = document.getElementById("credits-list");
-    if (!toggle || !list) return;
+    var wrap = document.getElementById("credits-list-wrap");
+    if (!toggle || !wrap) return;
 
     toggle.addEventListener("click", function () {
-      var isOpen = list.classList.toggle("is-open");
+      var isOpen = wrap.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", String(isOpen));
     });
   }

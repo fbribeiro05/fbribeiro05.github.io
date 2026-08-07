@@ -449,12 +449,12 @@ section h2 {
 }
 .credits-toggle:hover { border-color: var(--accent); }
 
-.credits-list {
+.credits-list-wrap {
   max-height: 0;
   overflow: hidden;
   transition: max-height .3s ease;
 }
-.credits-list.is-open { max-height: 900px; }
+.credits-list-wrap.is-open { max-height: 900px; }
 .credits-list li {
   padding: .75rem 0;
   border-bottom: 1px solid var(--line);
