@@ -75,7 +75,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "3rd year tuition",
     "journey.budget.item3": "Accommodation (3 years)",
     "journey.transparency.title": "Already secured",
-    "journey.transparency.body": "<p><strong>CHF 34,400</strong> already secured through foundations and awards:</p><ul><li><strong>Fondation Suisse d'Études</strong> — CHF 20,000 (non-renewable annual bursary)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — CHF 13,900 (half of first semester's fees)</li><li><strong>Prix Lily Landry</strong> (Conservatoire de Neuchâtel end-of-studies award) — CHF 500</li></ul>",
+    "journey.transparency.body": "<p>In fact, the total cost of my stay is estimated at £151,450. <strong>£32,650</strong> are already secured through foundations and awards:</p><ul><li><strong>Fondation Suisse d'Études</strong> — £18,300 (non-renewable annual bursary)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — £13,900 (half of first semester's fees)</li><li><strong>Prix Lily Landry</strong> (Conservatoire de Neuchâtel end-of-studies award) — £450</li></ul>",
     "journey.transparency.pending": "Further foundation applications are pending.",
 
     "contribute.eyebrow": "How to Contribute",
@@ -173,7 +173,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "Frais de scolarité, 3e année",
     "journey.budget.item3": "Logement (3 ans)",
     "journey.transparency.title": "Déjà sécurisé",
-    "journey.transparency.body": "<p><strong>CHF 34 400</strong> déjà obtenus grâce à des fondations et des prix :</p><ul><li><strong>Fondation Suisse d'Études</strong> — CHF 20 000 (bourse annuelle non renouvelable)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — CHF 13 900 (la moitié des frais du premier semestre)</li><li><strong>Prix Lily Landry</strong> (prix de fin d'études du Conservatoire de Neuchâtel) — CHF 500</li></ul>",
+    "journey.transparency.body": "<p>En réalité, le coût total de mon séjour est estimé à CHF 165'100. <strong>CHF 35'650</strong> ont déjà été obtenus grâce à des fondations et des prix :</p><ul><li><strong>Fondation Suisse d'Études</strong> — CHF 20'000 (bourse annuelle non renouvelable)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — CHF 15'150 (la moitié des frais du premier semestre)</li><li><strong>Prix Lily Landry</strong> (prix de fin d'études du Conservatoire de Neuchâtel) — CHF 500</li></ul>",
     "journey.transparency.pending": "D'autres demandes de bourses sont en cours.",
 
     "contribute.eyebrow": "Comment contribuer",
@@ -212,7 +212,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Persönliche Kampagne",
     "hero.h1": "Hilf mir, meinen Traum zu verwirklichen",
-    "hero.subtitle": "Mein Name ist Francisco Borges Ribeiro. Im kommenden September werde ich an der Guildford School of Acting, einer der selektivsten Musicaltheater-Schulen Großbritanniens, an der jedes Jahr von mehr als 2.000 Bewerbern nur 24 Plätze vergeben werden, mein Bachelorstudium (BA (Hons)) im Fach Musicaltheater aufnehmen. Als internationaler Studierender sind die Studiengebühren und Lebenshaltungskosten an einer britischen Kunsthochschule beträchtlich hoch. Ich sammle derzeit die noch fehlenden Mittel für meine Studiengebühren im 2. und 3. Studienjahr sowie für drei Jahre Unterkunft.",
+    "hero.subtitle": "Mein Name ist Francisco Borges Ribeiro. Im kommenden September werde ich an der Guildford School of Acting, einer der selektivsten Musicaltheater-Schulen Großbritanniens, an der jedes Jahr von mehr als 2'000 Bewerbern nur 24 Plätze vergeben werden, mein Bachelorstudium (BA (Hons)) im Fach Musicaltheater aufnehmen. Als internationaler Studierender sind die Studiengebühren und Lebenshaltungskosten an einer britischen Kunsthochschule beträchtlich hoch. Ich sammle derzeit die noch fehlenden Mittel für meine Studiengebühren im 2. und 3. Studienjahr sowie für drei Jahre Unterkunft.",
     "hero.stat.raisedLabel": "gesammelt",
     "hero.stat.goalLabel": "Ziel",
     "hero.rateNote": "Ungefährer Betrag, basierend auf den Wechselkursen von August 2026.",
@@ -271,7 +271,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "Studiengebühren, 3. Jahr",
     "journey.budget.item3": "Unterkunft (3 Jahre)",
     "journey.transparency.title": "Bereits gesichert",
-    "journey.transparency.body": "<p><strong>CHF 34.400</strong> bereits durch Stiftungen und Auszeichnungen gesichert:</p><ul><li><strong>Fondation Suisse d'Études</strong> — CHF 20.000 (nicht erneuerbares Jahresstipendium)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — CHF 13.900 (die Hälfte der Gebühren des ersten Semesters)</li><li><strong>Prix Lily Landry</strong> (Abschlusspreis des Conservatoire de Neuchâtel) — CHF 500</li></ul>",
+    "journey.transparency.body": "<p>Tatsächlich werden die Gesamtkosten meines Aufenthalts auf 165'100 CHF geschätzt. <strong>35'650 CHF</strong> wurden bereits durch Stiftungen und Auszeichnungen gesichert:</p><ul><li><strong>Fondation Suisse d'Études</strong> — 20'000 CHF (nicht erneuerbares Jahresstipendium)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — 15'150 CHF (die Hälfte der Gebühren des ersten Semesters)</li><li><strong>Prix Lily Landry</strong> (Abschlusspreis des Conservatoire de Neuchâtel) — 500 CHF</li></ul>",
     "journey.transparency.pending": "Weitere Stiftungsanträge sind derzeit in Bearbeitung.",
 
     "contribute.eyebrow": "So kannst du beitragen",
@@ -369,7 +369,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "Propinas do 3.º ano",
     "journey.budget.item3": "Alojamento (3 anos)",
     "journey.transparency.title": "Já Assegurado",
-    "journey.transparency.body": "<p><strong>CHF 34.400</strong> já assegurados através de fundações e prémios:</p><ul><li><strong>Fondation Suisse d'Études</strong> — CHF 20.000 (bolsa anual não renovável)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — CHF 13.900 (metade das propinas do primeiro semestre)</li><li><strong>Prix Lily Landry</strong> (prémio de final de curso do Conservatório de Neuchâtel) — CHF 500</li></ul>",
+    "journey.transparency.body": "<p>Na verdade, o custo total da minha estadia está estimado em 176'750€. <strong>38'165€</strong> já assegurados através de fundações e prémios:</p><ul><li><strong>Fondation Suisse d'Études</strong> — 21'410€ (bolsa anual não renovável)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — 16'220€ (metade das propinas do primeiro semestre)</li><li><strong>Prix Lily Landry</strong> (prémio de final de curso do Conservatório de Neuchâtel) — 535€ </li></ul>",
     "journey.transparency.pending": "Encontram-se em curso outras candidaturas a fundações.",
 
     "contribute.eyebrow": "Como Contribuir",
