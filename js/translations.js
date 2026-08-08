@@ -178,7 +178,7 @@ window.TRANSLATIONS = {
 
     "contribute.eyebrow": "Comment contribuer",
     "contribute.h2": "Moyens de faire un don",
-    "contribute.smallAmount": "Chaque petit montant compte et aide vraiment. Cependant, je comprends que tout le monde n'est pas en mesure de contribuer, alors merci de ne le faire que si, et avec ce que, vous le pouvez.",
+    "contribute.smallAmount": "Chaque petit montant compte et aide vraiment. Cependant, je comprends que tout le monde n'est pas en mesure de contribuer, alors merci de ne le faire que si vous le pouvez, et avec ce que vous pouvez.",
     "contribute.twint.title": "TWINT",
     "contribute.twint.body": "Les contributeurs en Suisse peuvent envoyer un montant via TWINT en utilisant le numéro ci-dessous.",
     "contribute.copyBtn": "Copier",
