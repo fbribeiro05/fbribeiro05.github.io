@@ -75,7 +75,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "3rd year tuition",
     "journey.budget.item3": "Accommodation (3 years)",
     "journey.transparency.title": "Already secured",
-    "journey.transparency.body": "<p>In fact, the total cost of my stay is estimated at £151,450. <strong>£32,650</strong> are already secured through foundations and awards:</p><ul><li><strong>Fondation Suisse d'Études</strong> — £18,300 (non-renewable annual bursary)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — £13,900 (half of first semester's fees)</li><li><strong>Prix Lily Landry</strong> (Conservatoire de Neuchâtel end-of-studies award) — £450</li></ul>",
+    "journey.transparency.body": "<p>In fact, the total cost of my stay is estimated at £151,450. <strong>£32,650</strong> are already secured through foundations and awards:</p><ul><li><strong>Fondation Suisse d'Études</strong> — £18,300 (non-renewable annual bursary)</li><li><strong>Stiftung Dr. Hans und Hilde von Lorentz</strong> — £13,900 (half of first year's fees)</li><li><strong>Prix Lily Landry</strong> (Conservatoire de Neuchâtel end-of-studies award) — £450</li></ul>",
     "journey.transparency.pending": "Further foundation applications are pending.",
 
     "contribute.eyebrow": "How to Contribute",
