@@ -310,7 +310,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Campanha pessoal",
     "hero.h1": "Ajude-me a Realizar o Meu Sonho",
-    "hero.subtitle": "Chamo-me Francisco Borges Ribeiro. Em setembro, vou integrar a Guildford School of Acting, uma das escolas de teatro musical mais seletivas do Reino Unido, com 24 vagas oferecidas entre mais de 2000 candidatos por ano, para concluir a uma Licenciatura (BA Hons) em Teatro Musical. Para um estudante internacional, as propinas e os custos de vida num conservatório do Reino Unido são consideravelmente elevados. Estou a angariar os fundos que ainda faltam para o 2.º e 3.º anos de propinas e para três anos de alojamento.",
+    "hero.subtitle": "Chamo-me Francisco Borges Ribeiro. Em setembro, vou integrar a Guildford School of Acting, uma das escolas de teatro musical mais seletivas do Reino Unido, com 24 vagas entre mais de 2000 candidatos por ano, para concluir a uma Licenciatura (BA Hons) em Teatro Musical. Para um estudante internacional, as propinas e os custos de vida num conservatório do Reino Unido são consideravelmente elevados. Estou a angariar os fundos que ainda faltam para as propinas dos 2.º e 3.º anos e para três anos de alojamento.",
     "hero.stat.raisedLabel": "angariados",
     "hero.stat.goalLabel": "objetivo",
     "hero.rateNote": "Valor aproximado, com base nas taxas de câmbio de agosto de 2026.",
@@ -321,7 +321,7 @@ window.TRANSLATIONS = {
     "story.eyebrow": "A Minha História",
     "story.h2": "Do violino em Portugal ao West End",
     "story.origin.title": "As Origens",
-    "story.origin.body": "Nasci na Suíça e mudei-me para Portugal aos três anos, país onde o meu pai me mostrou uma noite, sem querer, o Festival Eurovisão da Canção. Apaixonei-me pelo violino que vi ser tocado pelo vencedor da edição: Alexander Rybak. Então, comecei aulas de violino aos quatro anos. Quando a minha família regressou à Suíça em 2014, integrei um grupo de teatro juvenil em Neuchâtel e, aos 13 anos, vi o meu primeiro musical: O Rei Leão, em Londres. Essa noite mudou tudo.",
+    "story.origin.body": "Nasci na Suíça e mudei-me para Portugal aos três anos, país onde o meu pai me mostrou, uma noite sem querer, o Festival Eurovisão da Canção. Apaixonei-me pelo violino que tocava Alexander Rybak, o vencedor da edição desse ano. Então, comecei aulas de violino aos quatro anos. Quando a minha família regressou à Suíça em 2014, integrei um grupo de teatro juvenil em Neuchâtel e, aos 13 anos, vi o meu primeiro musical: O Rei Leão, em Londres. Essa noite mudou tudo.",
     "story.turning.title": "O Ponto de Viragem",
     "story.turning.body": "Durante a Covid, não conseguia tirar o teatro musical da cabeça. Decidi integrar o programa de estudos artísticos “Elite” da escola Evaprod e, dois anos depois, ao interpretar Barnum em The Greatest Showman, um amigo próximo veio ter comigo depois do espetáculo, em lágrimas: “Obrigado. Este é o melhor dia da minha vida.” Foi aí que percebi que o teatro musical não era apenas uma paixão, era uma vocação.",
     "story.offers.title": "As Propostas",
