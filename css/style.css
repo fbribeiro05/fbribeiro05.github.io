@@ -338,6 +338,15 @@ section h2 {
   margin: .5rem 0 0;
 }
 
+.hero-tagline {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: clamp(1.0625rem, 1rem + .3vw, 1.25rem);
+  line-height: 1.45;
+  color: var(--text);
+  margin: .875rem 0 0;
+}
+
 .hero-media img {
   width: 100%;
   height: auto;

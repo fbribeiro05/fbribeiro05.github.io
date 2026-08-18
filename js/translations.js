@@ -16,6 +16,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Personal Campaign",
     "hero.h1": "Help Me Make My Dream Come True",
+    "hero.tagline": "GSA, 1 of 24 places. Chosen from over 2,000 auditionees.",
     "hero.subtitle": "My name is Francisco Borges Ribeiro. This September, I'm joining the Guildford School of Acting, one of the UK's most selective musical theatre schools, with 24 places offered out of more than 2,000 auditionees each year, to complete my BA (Hons) in Musical Theatre. As an international student, tuition and living costs at a UK conservatoire are considerably high. I'm raising the remaining funds for my 2nd and 3rd years of tuition and three years of accommodation.",
     "hero.stat.raisedLabel": "raised",
     "hero.stat.goalLabel": "goal",
@@ -116,6 +117,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Campagne personnelle",
     "hero.h1": "Aidez-moi à réaliser mon rêve",
+    "hero.tagline": "GSA, 1 place sur 24. Choisi parmi plus de 2 000 candidats.",
     "hero.subtitle": "Je m'appelle Francisco Borges Ribeiro. Dès septembre, je rejoins la Guildford School of Acting, l'une des écoles de comédie musicale les plus sélectives du Royaume-Uni, avec 24 places offertes parmi plus de 2 000 candidats chaque année, pour y entreprendre un Bachelor (BA Hons) en Comédie musicale. En tant qu'étudiant étranger, les frais de scolarité et le coût de la vie dans un conservatoire britannique sont particulièrement élevés. Je récolte les fonds qu'il me manque pour mes 2e et 3e années de scolarité, ainsi que pour trois ans de logement.",
     "hero.stat.raisedLabel": "récoltés",
     "hero.stat.goalLabel": "objectif",
@@ -216,6 +218,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Persönliche Kampagne",
     "hero.h1": "Hilf mir, meinen Traum zu verwirklichen",
+    "hero.tagline": "GSA, 1 von 24 Plätzen. Ausgewählt unter über 2.000 Bewerbern.",
     "hero.subtitle": "Mein Name ist Francisco Borges Ribeiro. Im kommenden September werde ich an der Guildford School of Acting, einer der selektivsten Musicaltheater-Schulen Großbritanniens, an der jedes Jahr von mehr als 2'000 Bewerbern nur 24 Plätze vergeben werden, mein Bachelorstudium (BA (Hons)) im Fach Musicaltheater aufnehmen. Als internationaler Studierender sind die Studiengebühren und Lebenshaltungskosten an einer britischen Kunsthochschule beträchtlich hoch. Ich sammle derzeit die noch fehlenden Mittel für meine Studiengebühren im 2. und 3. Studienjahr sowie für drei Jahre Unterkunft.",
     "hero.stat.raisedLabel": "gesammelt",
     "hero.stat.goalLabel": "Ziel",
@@ -316,6 +319,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Campanha pessoal",
     "hero.h1": "Ajude-me a Realizar o Meu Sonho",
+    "hero.tagline": "GSA, 1 de 24 vagas. Escolhido entre mais de 2000 candidatos.",
     "hero.subtitle": "Chamo-me Francisco Borges Ribeiro. Em setembro, vou integrar a Guildford School of Acting, uma das escolas de teatro musical mais seletivas do Reino Unido, com 24 vagas entre mais de 2000 candidatos por ano, para concluir a uma Licenciatura (BA Hons) em Teatro Musical. Para um estudante internacional, as propinas e os custos de vida num conservatório do Reino Unido são consideravelmente elevados. Estou a angariar os fundos que ainda faltam para as propinas dos 2.º e 3.º anos e para três anos de alojamento.",
     "hero.stat.raisedLabel": "angariados",
     "hero.stat.goalLabel": "objetivo",
