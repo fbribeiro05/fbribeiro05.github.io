@@ -165,6 +165,20 @@
     });
   }
 
+  // ---------- Story timeline expand/collapse ----------
+  function initStoryTimeline() {
+    document.querySelectorAll(".timeline-toggle").forEach(function (toggle) {
+      var body = document.getElementById(toggle.getAttribute("aria-controls"));
+      if (!body) return;
+
+      toggle.addEventListener("click", function () {
+        var isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        body.style.maxHeight = isOpen ? "0px" : body.scrollHeight + "px";
+      });
+    });
+  }
+
   // ---------- Copy to clipboard ----------
   function copyText(text) {
     if (navigator.clipboard && window.isSecureContext) {
@@ -218,6 +232,7 @@
     initLangSwitcher();
     initMobileNav();
     initCredits();
+    initStoryTimeline();
     initCopyButtons();
     setLanguage(getStoredLang());
   });

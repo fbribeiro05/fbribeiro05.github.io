@@ -193,24 +193,68 @@
       <p class="kicker" data-i18n="story.eyebrow">My Story</p>
       <h2 data-i18n="story.h2">From a violin in Portugal to the West End</h2>
 
-      <div class="story-grid hairline-grid">
-        <article class="story-block">
-          <h3 data-i18n="story.origin.title">Origin</h3>
-          <p data-i18n="story.origin.body">Placeholder — origin story.</p>
-        </article>
-        <article class="story-block">
-          <h3 data-i18n="story.turning.title">Turning Point</h3>
-          <p data-i18n="story.turning.body">Placeholder — turning point story.</p>
-        </article>
-        <article class="story-block">
-          <h3 data-i18n="story.offers.title">The Offers</h3>
-          <p data-i18n-html="story.offers.body">Placeholder — offers story.</p>
-        </article>
-        <article class="story-block">
-          <h3 data-i18n="story.why.title">Why GSA</h3>
-          <p data-i18n="story.why.body">Placeholder — why GSA story.</p>
-        </article>
-      </div>
+      <ol class="story-timeline">
+        <li class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <p class="timeline-label" data-i18n="story.origin.title">Origin</p>
+            <p class="timeline-hook" data-i18n="story.origin.hook">A violin, Eurovision, and a lion king in London.</p>
+            <button type="button" class="timeline-toggle" aria-expanded="false" aria-controls="timeline-body-origin">
+              <span class="timeline-toggle-more" data-i18n="story.readMore">Read more</span>
+              <span class="timeline-toggle-less" data-i18n="story.readLess">Show less</span>
+              <span class="timeline-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="timeline-body" id="timeline-body-origin">
+              <p data-i18n="story.origin.body">Placeholder — origin story.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <p class="timeline-label" data-i18n="story.turning.title">Turning Point</p>
+            <p class="timeline-hook" data-i18n="story.turning.hook">Covid, Barnum, and a friend's tears backstage.</p>
+            <button type="button" class="timeline-toggle" aria-expanded="false" aria-controls="timeline-body-turning">
+              <span class="timeline-toggle-more" data-i18n="story.readMore">Read more</span>
+              <span class="timeline-toggle-less" data-i18n="story.readLess">Show less</span>
+              <span class="timeline-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="timeline-body" id="timeline-body-turning">
+              <p data-i18n="story.turning.body">Placeholder — turning point story.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <p class="timeline-label" data-i18n="story.offers.title">The Offers</p>
+            <p class="timeline-hook" data-i18n="story.offers.hook">8 auditions. 5 offers. One clear favourite.</p>
+            <button type="button" class="timeline-toggle" aria-expanded="false" aria-controls="timeline-body-offers">
+              <span class="timeline-toggle-more" data-i18n="story.readMore">Read more</span>
+              <span class="timeline-toggle-less" data-i18n="story.readLess">Show less</span>
+              <span class="timeline-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="timeline-body" id="timeline-body-offers">
+              <p data-i18n-html="story.offers.body">Placeholder — offers story.</p>
+            </div>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="timeline-content">
+            <p class="timeline-label" data-i18n="story.why.title">Why GSA</p>
+            <p class="timeline-hook" data-i18n="story.why.hook">24 places. Over 2,000 hopefuls. One home.</p>
+            <button type="button" class="timeline-toggle" aria-expanded="false" aria-controls="timeline-body-why">
+              <span class="timeline-toggle-more" data-i18n="story.readMore">Read more</span>
+              <span class="timeline-toggle-less" data-i18n="story.readLess">Show less</span>
+              <span class="timeline-toggle-icon" aria-hidden="true"></span>
+            </button>
+            <div class="timeline-body" id="timeline-body-why">
+              <p data-i18n="story.why.body">Placeholder — why GSA story.</p>
+            </div>
+          </div>
+        </li>
+      </ol>
 
       <div class="credits" id="credits">
         <button type="button" class="credits-toggle" id="credits-toggle" aria-expanded="false" aria-controls="credits-list" data-i18n="story.credits.toggleShow">See credits</button>
