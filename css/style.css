@@ -533,9 +533,10 @@ section h2 {
   color: var(--muted);
 }
 
-.credits { margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+.roles-block { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--line); }
 .credits-toggle {
   min-height: 44px;
+  margin-top: 1.25rem;
   padding: 0 1.125rem;
   background: transparent;
   border: 1px solid var(--line-strong);
@@ -548,25 +549,9 @@ section h2 {
   cursor: pointer;
 }
 .credits-toggle:hover { border-color: var(--accent); }
-
-.credits-list-wrap {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .3s ease;
-}
-.credits-list-wrap.is-open { max-height: 900px; }
-.credits-list li {
-  padding: .75rem 0;
-  border-bottom: 1px solid var(--line);
-  font-size: .9375rem;
-  color: var(--muted);
-}
-.credits-list li:first-child { padding-top: 1.25rem; }
-
-@media (min-width: 768px) {
-  .credits-list { column-count: 2; column-gap: 2.5rem; }
-  .credits-list li { break-inside: avoid; }
-}
+.credits-toggle-less { display: none; }
+.credits-toggle[aria-expanded="true"] .credits-toggle-more { display: none; }
+.credits-toggle[aria-expanded="true"] .credits-toggle-less { display: inline; }
 
 /* ---------- Testimonials ---------- */
 .testimonials { padding-bottom: 0; }
@@ -634,84 +619,109 @@ section h2 {
 }
 
 /* ---------- My Work ---------- */
-.work-links { grid-template-columns: 1fr; margin-top: 1.5rem; }
-.work-card {
-  min-height: 44px;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-size: .875rem;
-}
-@media (min-width: 768px) { .work-links { grid-template-columns: 1fr 1fr; } }
 
-.credits-eyebrow {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: .8125rem;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--muted);
-  margin: 0 0 .875rem;
-}
-
-.credits-track {
-  display: flex;
-  border-top: 1px solid var(--line);
+/* Trust bar */
+.trust-bar {
+  text-align: center;
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.5rem;
   border-bottom: 1px solid var(--line);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: 1.5rem;
-  /* Looped via JS (script.js initCreditsLoop): the track is tripled and
-     scroll position silently jumps a full set-width when it nears either
-     end, so there's no stable "first card" to inset — keep this contained
-     within section-inner rather than bleeding to the viewport edge. The
-     scrollbar is hidden below since its thumb would visibly jump on
-     every loop reset — position has no meaning in an infinite track. */
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
-.credits-track::-webkit-scrollbar { display: none; }
-
-.credit-card {
-  scroll-snap-align: start;
-  flex: 0 0 62%;
-  display: flex;
-  flex-direction: column;
-  gap: .375rem;
-  background: var(--bg);
-  padding: 1.5rem 1.375rem;
-  border-right: 1px solid var(--line);
+.trust-kicker { margin: 0 0 1.25rem; }
+.trust-names {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  row-gap: 1rem;
 }
-a.credit-card { text-decoration: none; color: inherit; transition: background .15s ease; }
-a.credit-card:hover, a.credit-card:focus-visible { background: var(--panel-2); }
-
-.credit-card-tag {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: .75rem;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  color: var(--muted);
-}
-.credit-card-name {
+.trust-names span {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.625rem;
-  line-height: 1.15;
+  font-size: clamp(1.75rem, 1.3rem + 2vw, 2.75rem);
+  line-height: 1;
+  padding: 0 1.5rem;
+  border-left: 1px solid var(--line-strong);
 }
-.credit-card-detail {
-  font-size: .875rem;
+.trust-names span:nth-child(2n+1) { border-left: 0; }
+
+@media (min-width: 640px) {
+  .trust-names { grid-template-columns: repeat(4, auto); }
+  .trust-names span:nth-child(2n+1) { border-left: 1px solid var(--line-strong); }
+  .trust-names span:first-child { border-left: 0; }
+}
+
+/* Video feature cards */
+.work-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+.work-feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 1.75rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s ease, border-color .15s ease;
+}
+.work-feature-card:hover, .work-feature-card:focus-visible { background: var(--panel-2); border-color: var(--line-strong); }
+.work-feature-top { display: flex; align-items: center; justify-content: space-between; color: var(--muted); }
+.work-feature-icon svg { display: block; width: 28px; height: 28px; }
+.work-feature-arrow svg { display: block; width: 18px; height: 18px; }
+.work-feature-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.work-feature-detail { font-size: .9375rem; color: var(--muted); line-height: 1.55; }
+
+@media (min-width: 768px) { .work-cards { grid-template-columns: 1fr 1fr; } }
+
+/* Roles table */
+.roles-table { margin-top: 1.5rem; }
+.roles-row {
+  display: grid;
+  grid-template-columns: 2.75rem 1fr 1fr 5.5rem;
+  gap: .375rem 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.roles-head {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: .6875rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
   color: var(--muted);
+  padding: 0 0 .75rem;
+  border-bottom: 1px solid var(--line-strong);
+}
+.roles-year { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.roles-production { font-weight: 700; font-size: .9375rem; }
+.roles-role { color: var(--muted); font-size: .875rem; }
+.roles-type {
+  justify-self: start;
+  padding: .25rem .625rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 2px;
+  font-size: .625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+  white-space: nowrap;
 }
 
 @media (min-width: 480px) {
-  .credit-card { flex: 0 0 42%; }
-}
-@media (min-width: 768px) {
-  .credit-card { flex: 0 0 26%; }
+  .roles-row { grid-template-columns: 3.5rem 1fr 1fr 6rem; }
 }
 
 /* ---------- Gallery ---------- */

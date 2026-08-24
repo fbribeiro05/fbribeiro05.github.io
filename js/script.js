@@ -153,64 +153,18 @@
     });
   }
 
-  // ---------- Credits expand/collapse ----------
+  // ---------- Roles: featured preview <-> full chronological list ----------
   function initCredits() {
     var toggle = document.getElementById("credits-toggle");
-    var wrap = document.getElementById("credits-list-wrap");
-    if (!toggle || !wrap) return;
+    var featured = document.getElementById("roles-featured");
+    var full = document.getElementById("roles-full");
+    if (!toggle || !featured || !full) return;
 
     toggle.addEventListener("click", function () {
-      var isOpen = wrap.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-  }
-
-  // ---------- Credits banner: seamless infinite scroll loop ----------
-  // Triples the card set ([A][B][C], B/C identical clones of A) and starts
-  // scrolled to the top of set B. When scroll position nears the edge of
-  // an outer set, it jumps by exactly one set-width to the matching spot
-  // in the next set over — since the sets are pixel-identical, the jump
-  // is invisible and the drag/scroll never visibly hits an end.
-  function initCreditsLoop() {
-    var track = document.getElementById("credits-track");
-    if (!track) return;
-
-    var originalCards = Array.prototype.slice.call(track.children);
-    if (originalCards.length === 0) return;
-
-    function cloneSet() {
-      originalCards.forEach(function (card) {
-        var clone = card.cloneNode(true);
-        clone.setAttribute("aria-hidden", "true");
-        clone.querySelectorAll("a, button").forEach(function (el) {
-          el.tabIndex = -1;
-        });
-        track.appendChild(clone);
-      });
-    }
-    cloneSet();
-    cloneSet();
-
-    var setWidth = function () { return track.scrollWidth / 3; };
-    track.scrollLeft = setWidth();
-
-    var ticking = false;
-    track.addEventListener("scroll", function () {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        var w = setWidth();
-        if (track.scrollLeft < w * 0.5) {
-          track.scrollLeft += w;
-        } else if (track.scrollLeft > w * 1.5) {
-          track.scrollLeft -= w;
-        }
-        ticking = false;
-      });
-    }, { passive: true });
-
-    window.addEventListener("resize", function () {
-      track.scrollLeft = setWidth();
+      var showFull = toggle.getAttribute("aria-expanded") !== "true";
+      toggle.setAttribute("aria-expanded", String(showFull));
+      featured.hidden = showFull;
+      full.hidden = !showFull;
     });
   }
 
@@ -281,7 +235,6 @@
     initLangSwitcher();
     initMobileNav();
     initCredits();
-    initCreditsLoop();
     initStoryTimeline();
     initCopyButtons();
     setLanguage(getStoredLang());

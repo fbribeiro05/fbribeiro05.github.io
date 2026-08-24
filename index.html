@@ -177,71 +177,176 @@
   <!-- ============ MY WORK ============ -->
   <section class="work" id="work">
     <div class="section-inner">
-      <p class="kicker" data-i18n="work.eyebrow">My Work</p>
-      <h2 data-i18n="work.h2">See more</h2>
-      <p data-i18n="work.intro">Placeholder intro line.</p>
-      <div class="work-links hairline-grid">
-        <a class="card work-card" href="https://linktr.ee/w52pdzc7zy" target="_blank" rel="noopener" data-i18n="work.auditions">Auditions</a>
-        <a class="card work-card" href="https://linktr.ee/w52pdzc7zy8" target="_blank" rel="noopener" data-i18n="work.other">Other work</a>
+
+      <div class="trust-bar">
+        <p class="kicker trust-kicker" data-i18n="work.trust.eyebrow">They Trusted Me</p>
+        <div class="trust-names">
+          <!-- FRANCISCO: SRF and Le Matin are placeholders carried over from an earlier preview — confirm these are real before shipping, or remove them -->
+          <span data-i18n="work.credits.migros.name">Migros</span>
+          <span data-i18n="work.credits.rts.name">RTS</span>
+          <span data-i18n="work.credits.srf.name">SRF</span>
+          <span data-i18n="work.credits.lematin.name">Le Matin</span>
+        </div>
       </div>
 
-      <div class="credits" id="credits">
-        <p class="credits-eyebrow" data-i18n="work.credits.eyebrow">Credits</p>
+      <div class="work-block">
+        <h2 data-i18n="work.h2">See My Videos</h2>
+        <p data-i18n="work.intro">A look at my audition tapes and other filmed work.</p>
 
-        <div class="credits-track" id="credits-track">
-          <!-- FRANCISCO: add year + link (wrap in <a href="..." target="_blank" rel="noopener"> once you have one). Add more cards the same way for other big names. -->
-          <div class="credit-card">
-            <span class="credit-card-tag" data-i18n="work.credits.migros.tag">Advertising</span>
-            <span class="credit-card-name" data-i18n="work.credits.migros.name">Migros</span>
-            <span class="credit-card-detail" data-i18n="work.credits.migros.detail">Television advertisement</span>
-          </div>
-          <!-- FRANCISCO: add year + link (wrap in <a href="..." target="_blank" rel="noopener"> once you have one) -->
-          <div class="credit-card">
-            <span class="credit-card-tag" data-i18n="work.credits.rts.tag">Interview</span>
-            <span class="credit-card-name" data-i18n="work.credits.rts.name">RTS</span>
-            <span class="credit-card-detail" data-i18n="work.credits.rts.detail">Interviewed about the Eurovision Song Contest</span>
+        <div class="work-cards">
+          <a class="work-feature-card" href="https://linktr.ee/w52pdzc7zy" target="_blank" rel="noopener">
+            <div class="work-feature-top">
+              <span class="work-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <span class="work-feature-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+            <span class="work-feature-title" data-i18n="work.videos.auditions.title">Audition Videos</span>
+            <span class="work-feature-detail" data-i18n="work.videos.auditions.detail">My audition tapes for UK musical theatre schools</span>
+          </a>
+          <a class="work-feature-card" href="https://linktr.ee/w52pdzc7zy8" target="_blank" rel="noopener">
+            <div class="work-feature-top">
+              <span class="work-feature-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
+              </span>
+              <span class="work-feature-arrow" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg>
+              </span>
+            </div>
+            <span class="work-feature-title" data-i18n="work.videos.other.title">Other Filmed Work</span>
+            <span class="work-feature-detail" data-i18n="work.videos.other.detail">Interviews, adverts and other filmed projects</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="roles-block">
+        <h2 data-i18n="work.roles.h2">Roles &amp; Appearances</h2>
+
+        <div class="roles-table" id="roles-table">
+          <div class="roles-row roles-head">
+            <span data-i18n="work.roles.colYear">Year</span>
+            <span data-i18n="work.roles.colProduction">Production</span>
+            <span data-i18n="work.roles.colRole">Role</span>
+            <span data-i18n="work.roles.colType">Type</span>
           </div>
 
-          <!-- PREVIEW ONLY — placeholder cards to show scroll behaviour with more credits, remove before shipping -->
-          <div class="credit-card">
-            <span class="credit-card-tag">Broadcast</span>
-            <span class="credit-card-name">SRF</span>
-            <span class="credit-card-detail">Placeholder credit</span>
+          <!-- FRANCISCO: pick the 1-2 roles you want featured here — currently showing all 4 as placeholders. Clicking "See all roles" replaces this list with every role below in full chronological order, so nothing needs duplicating here by hand. -->
+          <div class="roles-featured" id="roles-featured">
+            <div class="roles-row">
+              <span class="roles-year">2025</span>
+              <span class="roles-production" data-i18n="work.roles.rts.production">RTS</span>
+              <span class="roles-role" data-i18n="work.roles.rts.role">Interview, Eurovision Song Contest</span>
+              <span class="roles-type" data-i18n="work.roles.type.press">Press</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2023</span>
+              <span class="roles-production" data-i18n="work.roles.migros.production">Migros</span>
+              <span class="roles-role" data-i18n="work.roles.migros.role">Television advertisement</span>
+              <span class="roles-type" data-i18n="work.roles.type.screen">Screen</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2022</span>
+              <span class="roles-production" data-i18n="work.roles.indociles.production">Les Indociles</span>
+              <span class="roles-role" data-i18n="work.roles.indociles.role">Extra, RTS series</span>
+              <span class="roles-type" data-i18n="work.roles.type.screen">Screen</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2021</span>
+              <span class="roles-production" data-i18n="work.roles.romeo.production">Romeo &amp; Juliette</span>
+              <span class="roles-role" data-i18n="work.roles.romeo.role">Romeo</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
           </div>
-          <div class="credit-card">
-            <span class="credit-card-tag">Print</span>
-            <span class="credit-card-name">Le Matin</span>
-            <span class="credit-card-detail">Placeholder credit</span>
+
+          <!-- Every role, strict chronological order (descending) — shown in place of .roles-featured when "See all roles" is clicked -->
+          <div class="roles-full" id="roles-full" hidden>
+            <div class="roles-row">
+              <span class="roles-year">2026</span>
+              <span class="roles-production" data-i18n="work.roles.gatsby.production">The Great Gatsby</span>
+              <span class="roles-role" data-i18n="work.roles.gatsby.role">Nick Carraway</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2025</span>
+              <span class="roles-production" data-i18n="work.roles.hadestown.production">Hadestown</span>
+              <span class="roles-role" data-i18n="work.roles.hadestown.role">Hades</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2025</span>
+              <span class="roles-production" data-i18n="work.roles.rts.production">RTS</span>
+              <span class="roles-role" data-i18n="work.roles.rts.role">Interview, Eurovision Song Contest</span>
+              <span class="roles-type" data-i18n="work.roles.type.press">Press</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2025</span>
+              <span class="roles-production" data-i18n="work.roles.fanvision.production">FANVision Song Contest, Malta</span>
+              <span class="roles-role" data-i18n="work.roles.fanvision.role">Represented Switzerland, 2nd place</span>
+              <span class="roles-type" data-i18n="work.roles.type.screen">Screen</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2024</span>
+              <span class="roles-production" data-i18n="work.roles.wss.production">West Side Story (excerpts)</span>
+              <span class="roles-role" data-i18n="work.roles.wss.role">Tony, Riff &amp; Ensemble</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2024</span>
+              <span class="roles-production" data-i18n="work.roles.singin.production">Singin' in the Rain</span>
+              <span class="roles-role" data-i18n="work.roles.singin.role">Dexter &amp; Jazz Singer</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2023</span>
+              <span class="roles-production" data-i18n="work.roles.starmania.production">Starmania</span>
+              <span class="roles-role" data-i18n="work.roles.starmania.role">Johnny Rockfort</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2023</span>
+              <span class="roles-production" data-i18n="work.roles.smalltalk.production">Small Talk</span>
+              <span class="roles-role" data-i18n="work.roles.smalltalk.role">Tim</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2023</span>
+              <span class="roles-production" data-i18n="work.roles.medecin.production">Le Médecin Malgré Lui</span>
+              <span class="roles-role" data-i18n="work.roles.medecin.role">Léandre</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2023</span>
+              <span class="roles-production" data-i18n="work.roles.migros.production">Migros</span>
+              <span class="roles-role" data-i18n="work.roles.migros.role">Television advertisement</span>
+              <span class="roles-type" data-i18n="work.roles.type.screen">Screen</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2022</span>
+              <span class="roles-production" data-i18n="work.roles.indociles.production">Les Indociles</span>
+              <span class="roles-role" data-i18n="work.roles.indociles.role">Extra, RTS series</span>
+              <span class="roles-type" data-i18n="work.roles.type.screen">Screen</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2022</span>
+              <span class="roles-production" data-i18n="work.roles.showman.production">The Greatest Showman</span>
+              <span class="roles-role" data-i18n="work.roles.showman.role">Barnum</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
+            <div class="roles-row">
+              <span class="roles-year">2021</span>
+              <span class="roles-production" data-i18n="work.roles.romeo.production">Romeo &amp; Juliette</span>
+              <span class="roles-role" data-i18n="work.roles.romeo.role">Romeo</span>
+              <span class="roles-type" data-i18n="work.roles.type.theatre">Theatre</span>
+            </div>
           </div>
-          <div class="credit-card">
-            <span class="credit-card-tag">Campaign</span>
-            <span class="credit-card-name">Coop</span>
-            <span class="credit-card-detail">Placeholder credit</span>
-          </div>
-          <div class="credit-card">
-            <span class="credit-card-tag">Podcast</span>
-            <span class="credit-card-name">20 Minutes</span>
-            <span class="credit-card-detail">Placeholder credit</span>
-          </div>
-          <div class="credit-card">
-            <span class="credit-card-tag">Interview</span>
-            <span class="credit-card-name">Radio Fribourg</span>
-            <span class="credit-card-detail">Placeholder credit</span>
-          </div>
-          <div class="credit-card">
-            <span class="credit-card-tag">Advertising</span>
-            <span class="credit-card-name">Swisscom</span>
-            <span class="credit-card-detail">Placeholder credit</span>
-          </div>
-          <!-- END PREVIEW ONLY -->
         </div>
 
-        <button type="button" class="credits-toggle" id="credits-toggle" aria-expanded="false" aria-controls="credits-list" data-i18n="work.credits.toggleShow">See all credits</button>
-        <div class="credits-list-wrap" id="credits-list-wrap">
-          <ul class="credits-list" id="credits-list" data-i18n-html="work.credits.list">
-            <li>Placeholder credit item</li>
-          </ul>
-        </div>
+        <button type="button" class="credits-toggle" id="credits-toggle" aria-expanded="false" aria-controls="roles-full">
+          <span class="credits-toggle-more" data-i18n="work.credits.toggleShow">See more</span>
+          <span class="credits-toggle-less" data-i18n="work.credits.toggleHide">See less</span>
+        </button>
       </div>
     </div>
   </section>
