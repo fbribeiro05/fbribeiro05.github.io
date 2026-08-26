@@ -688,7 +688,7 @@ section h2 {
 .roles-table { margin-top: 1.5rem; }
 .roles-row {
   display: grid;
-  grid-template-columns: 2.75rem 1fr 1fr 5.5rem;
+  grid-template-columns: 2.75rem 1fr 1fr 5.75rem;
   gap: .375rem 1rem;
   align-items: center;
   padding: 1rem 0;
@@ -708,8 +708,10 @@ section h2 {
 .roles-production { font-weight: 700; font-size: .9375rem; }
 .roles-role { color: var(--muted); font-size: .875rem; }
 .roles-type {
-  justify-self: start;
-  padding: .25rem .625rem;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+  padding: .25rem .45rem;
   border: 1px solid var(--line-strong);
   border-radius: 2px;
   font-size: .625rem;
@@ -721,7 +723,7 @@ section h2 {
 }
 
 @media (min-width: 480px) {
-  .roles-row { grid-template-columns: 3.5rem 1fr 1fr 6rem; }
+  .roles-row { grid-template-columns: 3.5rem 1fr 1fr 5.75rem; }
 }
 
 /* ---------- Gallery ---------- */
