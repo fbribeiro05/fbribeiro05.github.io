@@ -16,7 +16,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Crowdfunding",
     "hero.h1": "Help Me Make My Dream Come True",
-    "hero.tagline": "GSA: 1 plaece out of 24. Chosen from over 2,000 auditionees.",
+    "hero.tagline": "GSA: 1 place out of 24. Chosen from over 2,000 auditionees.",
     "hero.subtitle": "In September, I'll be joining the Guildford School of Acting to study for a Bachelor's degree (BA Hons) in Musical Theatre. It is one of the most selective musical theatre schools in the UK, offering just 24 places from over 2,000 applicants each year. I am raising the funds I need to cover my tuition fees and three years' accommodation.",
     "hero.stat.raisedLabel": "raised",
     "hero.stat.goalLabel": "goal",
