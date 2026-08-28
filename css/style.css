@@ -51,8 +51,8 @@ ul { list-style: none; padding: 0; }
 code { font-family: var(--font-body); }
 
 .text-link {
-  color: var(--accent);
-  font-weight: 700;
+  color: inherit;
+  font-weight: inherit;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
