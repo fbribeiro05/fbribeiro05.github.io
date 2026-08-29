@@ -16,7 +16,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Crowdfunding",
     "hero.h1": "Help Me Make My Dream Come True",
-    "hero.tagline": "GSA: 1 place out of 24. Chosen from over 2,000 auditionees.",
+    "hero.tagline": "1 place out of 24. Chosen from over 2,000 auditionees.",
     "hero.subtitle": "In September, I'll be joining the <strong>Guildford School of Acting</strong> to study for a Bachelor's degree (BA Hons) in <strong>Musical Theatre </strong>. It is one of the most selective musical theatre schools in the UK, offering just <strong>24 places</strong> from over 2,000 applicants each year. I am raising the funds I need to cover my <strong>tuition fees</strong> and three years <strong>accommodation</strong>.",
     "hero.stat.raisedLabel": "raised",
     "hero.stat.goalLabel": "goal",
@@ -210,7 +210,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Crowdfunding",
     "hero.h1": "Aidez-moi à réaliser mon rêve",
-    "hero.tagline": "GSA : 1 place sur 24. Choisi parmi plus de 2'000 candidats.",
+    "hero.tagline": "1 place sur 24. Choisi parmi plus de 2'000 candidats.",
     "hero.subtitle": "Dès septembre, je rejoins la <strong>Guildford School of Actin</strong>, pour y entreprendre un Bachelor (BA Hons) en <strong>comédie musicale</strong>. Il s'agit de l'une des écoles de comédie musicale les plus sélectives du Royaume-Uni, avec <strong>24 places</strong> offertes parmi plus de 2'000 candidats chaque année. Je récolte les fonds qu'il me manque pour couvrir les <strong>frais de scolarité</strong> et les trois ans de <strong>logement</strong>.",
     "hero.stat.raisedLabel": "récoltés",
     "hero.stat.goalLabel": "objectif",
@@ -402,7 +402,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Crowdfunding",
     "hero.h1": "Hilf mir, meinen Traum zu verwirklichen",
-    "hero.tagline": "GSA: 1 von 24 Plätzen, ausgewählt aus über 2'000 Bewerbern.",
+    "hero.tagline": "1 von 24 Plätzen, ausgewählt aus über 2'000 Bewerbern.",
     "hero.subtitle": "Ab September beginne ich an der <strong>Guildford School of Acting</strong> ein Bachelor-Studium (BA Hons) im Fach <strong>Musical</strong>. Es handelt sich um eine der selektivsten Musicalschulen Grossbritanniens, an der jedes Jahr <strong>24 Plätze</strong> unter über 2'000 Bewerbern vergeben werden. Ich sammle die fehlenden Mittel, um die <strong>Studiengebühren</strong> und die <strong>Wohnkosten</strong> für drei Jahre zu decken.",
     "hero.stat.raisedLabel": "gesammelt",
     "hero.stat.goalLabel": "Ziel",
@@ -594,7 +594,7 @@ window.TRANSLATIONS = {
 
     "hero.eyebrow": "Financiamento coletivo",
     "hero.h1": "Ajude-me a Realizar o Meu Sonho",
-    "hero.tagline": "GSA: 1 de 24 vagas, selecionado entre mais de 2'000 candidatos.",
+    "hero.tagline": "1 de 24 vagas, selecionado entre mais de 2'000 candidatos.",
     "hero.subtitle": "A partir de setembro, vou integrar a <strong>Guildford School of Acting</strong> para fazer uma Licenciatura (BA Hons) em <strong>teatro musical</strong>. Trata-se de uma das escolas mais seletivas do Reino Unido, com <strong>24 vagas</strong> disponíveis entre mais de 2'000 candidatos todos os anos. Estou a angariar os fundos que me faltam para cobrir as <strong>propinas</strong> e os custos de <strong>alojamento</strong> durante os três anos.",
     "hero.stat.raisedLabel": "angariados",
     "hero.stat.goalLabel": "objetivo",
