@@ -10,14 +10,14 @@ window.TRANSLATIONS = {
     "nav.logo": "Francisco Borges Ribeiro",
     "nav.story": "Story",
     "nav.journey": "Budget",
-    "nav.testimonials": "Testimonies",
+    "nav.testimonials": "Testimonials",
     "nav.gallery": "Gallery",
     "nav.donate": "Donate",
 
     "hero.eyebrow": "Crowdfunding",
     "hero.h1": "Help Me Make My Dream Come True",
     "hero.tagline": "GSA: 1 place out of 24. Chosen from over 2,000 auditionees.",
-    "hero.subtitle": "In September, I'll be joining the Guildford School of Acting to study for a Bachelor's degree (BA Hons) in Musical Theatre. It is one of the most selective musical theatre schools in the UK, offering just 24 places from over 2,000 applicants each year. I am raising the funds I need to cover my tuition fees and three years' accommodation.",
+    "hero.subtitle": "In September, I'll be joining the Guildford School of Acting to study for a Bachelor's degree (BA Hons) in Musical Theatre. It is one of the most selective musical theatre schools in the UK, offering just 24 places from over 2,000 applicants each year. I am raising the funds I need to cover my tuition fees and three years accommodation.",
     "hero.stat.raisedLabel": "raised",
     "hero.stat.goalLabel": "goal",
     "hero.rateNote": "Approximate, based on exchange rates as of August 2026.",
@@ -30,7 +30,7 @@ window.TRANSLATIONS = {
 
     "story.origin.title": "How I discovered the violin",
     "story.origin.hook": "The Eurovision spark",
-    "story.origin.body": "I was born in Switzerland and, at the age of three, I moved to Portugal. That's where my musical journey began. In 2009, I watched the Eurovision Song Contest for the first time with my father. I fell in love with the music, and in particular with the violin, which was played by the winner of the contest. That's how I started taking violin lessons at the age of four.",
+    "story.origin.body": "I was born in Switzerland and, at the age of three, I moved to Portugal. That's where my musical journey began. In 2009, I watched the Eurovision Song Contest for the first time with my father. I fell in love with the music, and in particular with the violin, which was played by the winner of the contest. This is what inspired me to start taking violin lessons at the age of four.",
 
     "story.test1.title": "Back in Switzerland",
     "story.test1.hook": "Theatre and singing take centre stage",
@@ -53,8 +53,8 @@ window.TRANSLATIONS = {
     "story.test4.body": "I have always been a very good student, with consistently strong results throughout my school career. At the start of my third year of secondary school, I was invited to join the University of Bern as part of the “Begabtenförderung” programme. I completed my secondary school studies with the highest overall average at the school (5.88/6) and three awards.",
 
     "story.offers.title": "University and Conservatoire",
-    "story.offers.hook": "The challenge of a dual course of studY",
-    "story.offers.body": "After obtaining my secondary school certificate, I enrolled at the University of Bern to study computer science and physics, and I sat the entrance exam for the Neuchâtel Conservatoire of Music to join its 'Pre-College' programme in musical theatre, which accepts only four students a year. Over the past three years, I have therefore pursued these studies in parallel, a personal challenge that I have risen to with flying colours thanks to my discipline, time management and constant commitment.",
+    "story.offers.hook": "The challenge of a dual course of study",
+    "story.offers.body": "After finishing secondary school, I enrolled at the University of Bern to study computer science and physics, and I sat the entrance exam for the Neuchâtel Conservatoire of Music to join its 'Pre-College' programme in musical theatre, which accepts only four students a year. Over the past three years, I have therefore pursued these studies in parallel, a personal challenge that I have risen to with flying colours thanks to my discipline, time management and constant commitment.",
 
     "story.test5.title": "The audition process in the UK",
     "story.test5.hook": "Eight auditions, five offers",
@@ -67,7 +67,7 @@ window.TRANSLATIONS = {
     "story.readMore": "Read more",
     "story.readLess": "Show less",
 
-    "testimonials.eyebrow": "Testimonies",
+    "testimonials.eyebrow": "Testimonials",
     "testimonials.h2": "What my teachers say",
     "testimonials.quote1": "His dancing is characterised by a beautiful duality: powerful and imbued with lightness. With a strong stage presence, Francisco knows how to capture the audience's attention and move them. He stands out for his enthusiasm, kindness and infectious energy. ",
     "testimonials.author1": "Claudia Grochain",
@@ -169,7 +169,7 @@ window.TRANSLATIONS = {
     "journey.budget.item2": "3rd year tuition",
     "journey.budget.item3": "Accommodation (3 years)",
     "journey.transparency.title": "Already secured",
-    "journey.transparency.body": "<p>In fact, the total cost of my stay is estimated at £151,450. <strong>£32,650</strong> are already secured through foundations and awards:</p><ul><li><a class=\"text-link\" href=\"https://fondetudes.ch\" target=\"_blank\" rel=\"noopener\">Fondation Suisse d'Études</a> — £18,300 (non-renewable annual bursary)</li><li><a class=\"text-link\" href=\"https://www.vonlorentz-stiftung.ch\" target=\"_blank\" rel=\"noopener\">Stiftung Dr. Hans und Hilde von Lorentz</a> — £13,900 (half of first year's fees)</li><li><strong>Prix Lily Landry</strong> (<a class=\"text-link\" href=\"https://www.cmne.ch\" target=\"_blank\" rel=\"noopener\">Conservatoire de musique Neuchâtelois</a> end-of-studies award) — £450</li></ul>",
+    "journey.transparency.body": "<p>In fact, the total cost of my stay is estimated at £151,450. <strong>£32,650</strong> is already secured through foundations and awards:</p><ul><li><a class=\"text-link\" href=\"https://fondetudes.ch\" target=\"_blank\" rel=\"noopener\">Fondation Suisse d'Études</a> — £18,300 (non-renewable annual bursary)</li><li><a class=\"text-link\" href=\"https://www.vonlorentz-stiftung.ch\" target=\"_blank\" rel=\"noopener\">Stiftung Dr. Hans und Hilde von Lorentz</a> — £13,900 (half of first year's fees)</li><li><strong>Prix Lily Landry</strong> (<a class=\"text-link\" href=\"https://www.cmne.ch\" target=\"_blank\" rel=\"noopener\">Conservatoire de musique Neuchâtelois</a> end-of-studies award) — £450</li></ul>",
     "journey.transparency.pending": "Further foundation applications are pending.",
 
     "contribute.eyebrow": "How to Contribute",
