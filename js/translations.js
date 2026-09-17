@@ -790,5 +790,5 @@ window.CURRENCY_CONFIG = {
 // Campaign figures in GBP (source of truth — brief §2).
 window.CAMPAIGN = {
   goalGBP: 83100,
-  raisedGBP: 2378
+  raisedGBP: 4369
 };
