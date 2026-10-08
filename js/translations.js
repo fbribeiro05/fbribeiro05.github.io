@@ -782,13 +782,13 @@ window.TRANSLATIONS = {
 // ⚠️ Verify/update these before launch — see README.
 window.CURRENCY_CONFIG = {
   en: { code: "GBP", symbol: "£", rate: 1,    locale: "en-GB" },
-  fr: { code: "CHF", symbol: "CHF", rate: 1.11, locale: "fr-CH" },
-  de: { code: "CHF", symbol: "CHF", rate: 1.11, locale: "de-DE" },
-  pt: { code: "EUR", symbol: "€", rate: 1.17, locale: "pt-PT" }
+  fr: { code: "CHF", symbol: "CHF", rate: 1.10, locale: "fr-CH" },
+  de: { code: "CHF", symbol: "CHF", rate: 1.10, locale: "de-DE" },
+  pt: { code: "EUR", symbol: "€", rate: 1.18, locale: "pt-PT" }
 };
 
 // Campaign figures in GBP (source of truth — brief §2).
 window.CAMPAIGN = {
   goalGBP: 83100,
-  raisedGBP: 4592
+  raisedGBP: 5430
 };
